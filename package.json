@@ -1,11 +1,11 @@
 {
-	"name" : "eis",
+	"name" : "eisTest",
 	"version" : "0.0.1",
-	"description" : "first eistest",
-	"author" : "Selina_Mazzaro'",
-	"main" : "eis.js",
+	"description" : "second node test",
+	"author" : "Selina Mazzaro'",
+	"main" : "eisTest.js",
 	"scripts" : {
-		"start" : "node eis.js"
+		"start" : "node eisTest.js"
 	},
 	"engines" : {
 		"node" : "6.10.3"
