@@ -1,8 +1,8 @@
 {
-	"name" : "NodeTest",
+	"name" : "eis",
 	"version" : "0.0.1",
-	"description" : "first node test",
-	"author" : "Jirka Dell'Oro-Friedl'",
+	"description" : "first eistest",
+	"author" : "Selina_Mazzaro'",
 	"main" : "eis.js",
 	"scripts" : {
 		"start" : "node eis.js"
