@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>FormElements</title>
+<link rel="stylesheet" href="eis.css" type="text/css"
+	media="screen" />
+<script src="eis.js" type="text/javascript" charset="utf-8"></script>
+<form action="https://eisdiele.herokuapp.com/" method="get">
+</head>
+<body>
+	<h1 id="title">Dein Eis-Dealer</h1>
+	<fieldset id="uebersicht">
+		<legend> Bestellübersicht </legend>
+		<label>Bestellung:</label>
+		<p id="bestellung"></p>
+		<hr />
+		<label>Aktueller Preis:</label>
+		<p id="sum"></p>
+		<hr />
+		<button id="button">Bestellung prüfen</button>
+	</fieldset>
+	<fieldset id="darreichung">
+		<legend> Darreichungsform </legend>
+		<input type="checkbox" name="Waffel" value="dar1" id="dar1" /> <label
+			for="dar1">Waffel</label> <input type="checkbox" name="Becher"
+			value="dar1" id="dar1" /> <label for="dar1">Becher</label>
+	</fieldset>
+	<fieldset id="fruchteis">
+		<legend> Fruchteis, Kugel je 1€</legend>
+	</fieldset>
+	<fieldset id="milcheis">
+		<legend> Milcheis, Kugel je 1€</legend>
+	</fieldset>
+
+	<fieldset id="toppings">
+		<legend> Toppings, je 50ct</legend>
+	</fieldset>
+	<fieldset id="lieferung">
+		<legend> Lieferung </legend>
+		<input type="radio" name="Standard" value="radio1" id="radio1" /> <label
+			for="radio1">Standard (3 Tage)</label> <input type="radio"
+			name="Radiogroup" value="radio2" id="radio2" /> <label for="radio2">Express
+			(Ankunft morgen)</label> <input type="radio" name="Radiogroup" value="radio3"
+			id="radio3" /> <label for="radio3">ins Ausland</label>
+	</fieldset>
+	<fieldset id="liefer">
+		<legend> Lieferadresse </legend>
+		Name <input class="proof" type="text" name="Text"
+			placeholder="Bitte eingeben" required />
+		<hr />
+		Vorname <input class="proof" type="text" name="Text"
+			placeholder="Bitte eingeben" />
+		<hr />
+		Straße/ Hausnummer <input class="proof" type="text" name="Strasse"
+			pattern="[0-9]{3}" placeholder="Bitte eingeben" /> 
+			<input class="proof" type="number" name="Nummer" placeholder="Nr" />
+		<hr />
+		PLZ <input class="proof" type="number" name="PLZ"
+			placeholder="Bitte eingeben" /> Stadt <input class="proof" type="text"
+			name="Stadt" placeholder="Bitte eingeben" />
+		<hr />
+		Land <select name="Land" id="land">
+			<option value="option1">Deutschland</option>
+			<option value="option3">Frankreich</option>
+			<option value="option2">Österreich</option>
+			<option value="option4">Schweiz</option>
+		</select>
+	</fieldset>
+</body>
+</html>

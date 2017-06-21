@@ -5,7 +5,7 @@
 	"author" : "Jirka Dell'Oro-Friedl'",
 	"main" : "NodeTest.js",
 	"scripts" : {
-		"start" : "node NodeTest.js"
+		"start" : "node eis.js"
 	},
 	"engines" : {
 		"node" : "6.10.3"
