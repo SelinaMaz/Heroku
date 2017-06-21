@@ -33,13 +33,16 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     //         die Url wird geparsed (zu einem JS-Objekt), wird zu einem boolean. Aus dem boolean wird query.
     console.log(query);
     let key: string;
-    for (key in query)
-        console.log(key + ":" + query[key]);
-
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8"); // als Response wird Header angelegt 
-    _response.write("Ich höre Stimmen!"); // in HTML wird "ich h�re Stimmen" geschrieben.
-    _response.write("Ich kann auch Stimmen hören :D");
-    _response.write(query); // A2.2 Response so angepasst dass query-Daten auch in Response auftauchen.
+
+    for (key in query)
+        _response.write(key + ":" + query[key]);
+
+    //    _response.setHeader("Access-Control-Allow-Origin", "*");
+    //    _response.setHeader("content-type", "text/html; charset=utf-8"); // als Response wird Header angelegt 
+    //    _response.write("Ich höre Stimmen!"); // in HTML wird "ich h�re Stimmen" geschrieben.
+    //    _response.write("Ich kann auch Stimmen hören :D");
+    //    _response.write(query); // A2.2 Response so angepasst dass query-Daten auch in Response auftauchen.
     _response.end();
 }
