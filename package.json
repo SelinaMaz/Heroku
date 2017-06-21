@@ -3,7 +3,7 @@
 	"version" : "0.0.1",
 	"description" : "first node test",
 	"author" : "Jirka Dell'Oro-Friedl'",
-	"main" : "NodeTest.js",
+	"main" : "eis.js",
 	"scripts" : {
 		"start" : "node eis.js"
 	},
