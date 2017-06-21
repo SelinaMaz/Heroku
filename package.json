@@ -3,7 +3,7 @@
 	"version" : "0.0.1",
 	"description" : "second node test",
 	"author" : "Selina Mazzaro'",
-	"main" : "eisTest.js",
+	"main" : "eis.js",
 	"scripts" : {
 		"start" : "node eisTest.js"
 	},
