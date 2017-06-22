@@ -1,15 +1,16 @@
 {
-	"name" : "eisTest",
+	"name" : "NodeTest",
 	"version" : "0.0.1",
-	"description" : "second node test",
-	"author" : "Selina Mazzaro'",
-	"main" : "eis.js",
+	"description" : "first node test",
+	"author" : "Jirka Dell'Oro-Friedl'",
+	"main" : "NodeTest.js",
 	"scripts" : {
-		"start" : "node eisTest.js"
+		"start" : "node NodeTest.js"
 	},
 	"engines" : {
 		"node" : "6.10.3"
 	},
 	"dependencies" : {
+		"mongodb": "2.2.12"
 	}
 }
