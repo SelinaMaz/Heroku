@@ -43,7 +43,7 @@ namespace Form {
             let fieldset: HTMLFieldSetElement = fieldsets[i];
             fieldset.addEventListener("change", handleChange);
             fieldset.addEventListener("change", showSum);
-//            button.addEventListener("click", clickButton);
+            //            button.addEventListener("click", clickButton);
         }
 
         fieldsetEissorte = document.getElementById("fruchteis");
@@ -159,11 +159,11 @@ namespace Form {
             console.log(proof.length);
             if (proof[i].validity.valid == false) {
                 alert("Die Eingabe ist nicht korrekt.");
-              //  location.reload();
+                location.reload();
             }
             else {
-               // alert("Vielen Dank fuer Ihre Bestellung!");
-               // location.reload();
+                // alert("Vielen Dank fuer Ihre Bestellung!");
+                // location.reload();
             }
         }
     }

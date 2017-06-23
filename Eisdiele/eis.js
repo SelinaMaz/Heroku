@@ -122,6 +122,7 @@ var Form;
             console.log(proof.length);
             if (proof[i].validity.valid == false) {
                 alert("Die Eingabe ist nicht korrekt.");
+                location.reload();
             }
             else {
             }
