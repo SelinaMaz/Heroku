@@ -109,7 +109,7 @@ var Form;
                 summe += 0.5;
         }
         console.log(summe);
-        document.getElementById("sum").innerText = summe.toString() + " �";
+        document.getElementById("sum").innerText = summe.toString() + " €";
     }
     function clickButton(_event) {
         let proof = [];

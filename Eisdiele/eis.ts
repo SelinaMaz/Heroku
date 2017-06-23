@@ -142,7 +142,7 @@ namespace Form {
         }
         console.log(summe);
 
-        document.getElementById("sum").innerText = summe.toString() + " €";
+        document.getElementById("sum").innerText = summe.toString() + " â‚¬";
 
     }
 
