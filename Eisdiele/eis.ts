@@ -1,8 +1,8 @@
 /*
-Aufgabe: 9
-Name: Jana Burger
-Matrikel: 255076
-Datum: 4.6.17
+Aufgabe: 10
+Name: Selina Mazzaro
+Matrikel: 250468
+Datum: 22.6.17
     
 Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 Er wurde nicht kopiert und auch nicht diktiert. Teile der Aufgabe zusammen mit Jacqueline und Selina erstellt*/
@@ -43,7 +43,7 @@ namespace Form {
             let fieldset: HTMLFieldSetElement = fieldsets[i];
             fieldset.addEventListener("change", handleChange);
             fieldset.addEventListener("change", showSum);
-            button.addEventListener("click", clickButton);
+//            button.addEventListener("click", clickButton);
         }
 
         fieldsetEissorte = document.getElementById("fruchteis");
@@ -64,7 +64,7 @@ namespace Form {
             fieldsetEissorte.appendChild(label);
 
             input.className = "checkbox";
-
+            input.name = eissorten[i];
             console.log(eissorten[i]);
 
         }
@@ -83,6 +83,7 @@ namespace Form {
             fieldsetMilchsorte.appendChild(label);
 
             input.className = "checkbox";
+            input.name = milchsorten[i];
 
             console.log(milchsorten[i]);
         }
@@ -99,7 +100,7 @@ namespace Form {
             fieldsetTopping.appendChild(label);
 
             input.className = "toppings";
-
+            input.name = toppings[i];
             console.log(toppings[i]);
         }
     }
