@@ -158,12 +158,12 @@ namespace Form {
         for (let i: number = 0; i < proof.length; i++) {
             console.log(proof.length);
             if (proof[i].validity.valid == false) {
-                alert("Die Eingabe ist nicht korrekt.");
-                location.reload();
+              //  alert("Die Eingabe ist nicht korrekt.");
+              //  location.reload();
             }
             else {
-                alert("Vielen Dank fuer Ihre Bestellung!");
-                location.reload();
+               // alert("Vielen Dank fuer Ihre Bestellung!");
+               // location.reload();
             }
         }
     }
