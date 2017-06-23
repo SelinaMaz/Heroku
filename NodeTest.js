@@ -26,14 +26,14 @@ function handleRequest(_request, _response) {
     let key;
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8"); // als Response wird Header angelegt 
-    _response.write("Sie haben folgendes in Bestellung gegeben:" + "<br>");
+    _response.write("Sie haben folgendes in Bestellung gegeben:" + "<br>" + "<br>");
     for (key in query) {
         if (query[key] == "0") {
             continue;
         }
         _response.write(key + ":" + " " + query[key] + "<br>");
     }
-    _response.write("Vielen Dank f�r Ihre Bestellung. Sie wird in k�rze bearbeitet");
+    _response.write("<br>" + "Vielen Dank f�r Ihre Bestellung. Sie wird in k�rze bearbeitet");
     //    _response.setHeader("Access-Control-Allow-Origin", "*");
     //    _response.setHeader("content-type", "text/html; charset=utf-8"); // als Response wird Header angelegt 
     //    _response.write("Ich höre Stimmen!"); // in HTML wird "ich h�re Stimmen" geschrieben.
