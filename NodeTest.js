@@ -26,8 +26,8 @@ function handleRequest(_request, _response) {
     let key;
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8"); // als Response wird Header angelegt 
+    _response.write("Vielen Dank f�r Ihre Bestellung. Sie wird in k�rze bearbeitet");
     for (key in query) {
-        _response.write("Vielen Dank f�r Ihre Bestellung. Sie wird in k�rze bearbeitet");
         if (query[key] == "0") {
             continue;
         }
