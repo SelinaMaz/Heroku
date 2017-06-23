@@ -40,7 +40,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
         if (query[key] == "0") {
             continue;
         }
-        _response.write(key + ":" + query[key]);
+        _response.write(key + ":" + query[key] + "/n");
     }
 
     //    _response.setHeader("Access-Control-Allow-Origin", "*");
