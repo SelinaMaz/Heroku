@@ -30,7 +30,7 @@ function handleRequest(_request, _response) {
         if (query[key] == "0") {
             continue;
         }
-        _response.write(key + ":" + query[key] + "/n");
+        _response.write(key + ":" + query[key] + "\n");
     }
     //    _response.setHeader("Access-Control-Allow-Origin", "*");
     //    _response.setHeader("content-type", "text/html; charset=utf-8"); // als Response wird Header angelegt 
