@@ -36,14 +36,14 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8"); // als Response wird Header angelegt 
 
-    _response.write("Vielen Dank für Ihre Bestellung. Sie wird in kürze bearbeitet");
+    _response.write("Sie haben folgendes in Bestellung gegeben:" + "<br>");
     for (key in query) {//nicht definiert wie lange sie läuft
         if (query[key] == "0") {
             continue;
         }
         _response.write(key + ":" + " " + query[key] + "<br>");
     }
-
+    _response.write("Vielen Dank für Ihre Bestellung. Sie wird in kürze bearbeitet");
     //    _response.setHeader("Access-Control-Allow-Origin", "*");
     //    _response.setHeader("content-type", "text/html; charset=utf-8"); // als Response wird Header angelegt 
     //    _response.write("Ich hÃ¶re Stimmen!"); // in HTML wird "ich höre Stimmen" geschrieben.
