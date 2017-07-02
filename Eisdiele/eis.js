@@ -15,15 +15,15 @@ var Form;
     let toppings = ["Sahne", "Schokosauce", "Erdbeersauce", "Schokostreusel",
         "Gummibaerchen", "Smarties", "kleine Cookies", "bunte Streusel"];
     //    Preise
-    let eissortenPrice = 1;
-    let toppingPrice = 0.50;
+    //    let eissortenPrice: number = 1;
+    //    let toppingPrice: number = 0.50;
     let fruchtInputs = [];
     let milchInputs = [];
     let topInputs = [];
     let fieldsetTopping;
     let fieldsetEissorte;
     let fieldsetMilchsorte;
-    let step = document.createElement("input");
+    //let step: HTMLInputElement = document.createElement("input");
     function init(_event) {
         let fieldsets = document.getElementsByTagName("fieldset");
         let button = document.getElementById("button");
@@ -31,6 +31,7 @@ var Form;
             let fieldset = fieldsets[i];
             fieldset.addEventListener("change", handleChange);
             fieldset.addEventListener("change", showSum);
+            button.addEventListener("click", clickButton);
         }
         fieldsetEissorte = document.getElementById("fruchteis");
         fieldsetMilchsorte = document.getElementById("milcheis");

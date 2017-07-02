@@ -20,8 +20,8 @@ namespace Form {
         "Gummibaerchen", "Smarties", "kleine Cookies", "bunte Streusel"];
 
     //    Preise
-    let eissortenPrice: number = 1;
-    let toppingPrice: number = 0.50;
+//    let eissortenPrice: number = 1;
+//    let toppingPrice: number = 0.50;
 
     let fruchtInputs: HTMLInputElement[] = [];
     let milchInputs: HTMLInputElement[] = [];
@@ -31,7 +31,7 @@ namespace Form {
     let fieldsetMilchsorte: HTMLElement;
 
 
-    let step: HTMLInputElement = document.createElement("input");
+    //let step: HTMLInputElement = document.createElement("input");
 
 
     function init(_event: Event): void {
@@ -43,7 +43,7 @@ namespace Form {
             let fieldset: HTMLFieldSetElement = fieldsets[i];
             fieldset.addEventListener("change", handleChange);
             fieldset.addEventListener("change", showSum);
-            //            button.addEventListener("click", clickButton);
+            button.addEventListener("click", clickButton);
         }
 
         fieldsetEissorte = document.getElementById("fruchteis");
