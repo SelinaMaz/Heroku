@@ -36,6 +36,11 @@ function handleRequest(_request, _response) {
                 respond(_response, json);
             });
             break;
+        case "search":
+            Database.search(function (json) {
+                respond(_response, json);
+            });
+            break;
         default:
             respond(_response, "unknown command: " + command);
             break;

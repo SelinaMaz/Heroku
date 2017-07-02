@@ -38,4 +38,15 @@ function findAll(_callback) {
     }
 }
 exports.findAll = findAll;
+function search(_callback) {
+    var cursor = students.find();
+    cursor.toArray(prepareAnswer);
+    function prepareAnswer(_e, studentArray) {
+        if (_e)
+            _callback("Error" + _e);
+        else
+            _callback(JSON.stringify(studentArray));
+    }
+}
+exports.search = search;
 //# sourceMappingURL=Database.js.map

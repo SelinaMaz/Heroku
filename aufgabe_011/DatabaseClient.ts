@@ -26,7 +26,6 @@ namespace DatabaseClient {
         sendRequest(query, handleFindResponse);
     }
 
-
     function sendRequest(_query: string, _callback: EventListener): void {
         let xhr: XMLHttpRequest = new XMLHttpRequest();
        // xhr.open("GET", "http://localhost:8100?" + _query, true);
