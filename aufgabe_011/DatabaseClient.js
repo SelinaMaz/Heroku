@@ -1,3 +1,11 @@
+/*
+Aufgabe: 11
+Name: Selina Mazzaro
+Matrikel: 250468
+Datum: 02.07.17
+    
+Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe.
+Er wurde nicht kopiert und auch nicht diktiert. Teile der Aufgabe zusammen mit Jacqueline und Selina erstellt*/
 var DatabaseClient;
 (function (DatabaseClient) {
     window.addEventListener("load", init);

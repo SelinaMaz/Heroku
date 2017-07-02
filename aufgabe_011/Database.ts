@@ -1,6 +1,6 @@
 /**
  * Simple database insertion and query for MongoDB
- * @author: Jirka Dell'Oro-Friedl
+ * @author: Selina Mazzaro
  */
 import Mongo = require("mongodb");
 console.log("Database starting");
@@ -44,14 +44,19 @@ export function findAll(_callback: Function): void {
     }
 }
 
-export function search(_callback: Function): void {
-    var cursor: Mongo.Cursor = students.find();
-    cursor.toArray(prepareAnswer);
-
-    function prepareAnswer(_e: Mongo.MongoError, studentArray: StudentData[]): void {
-        if (_e)
-            _callback("Der/die Stundent/-in ist nicht in unserer Datenbank." + _e);
-        else
-            _callback(JSON.stringify(studentArray[0]));
-    }
-}
+//export function search(_callback: Function): void {
+//    var search: Mongo.Cursor = students.find();
+//    search.toArray(prepareAnswer);
+//
+//    let name: StudentData;
+//    let matrikel: StudentData;
+//
+//    function prepareAnswer(_name, _matrikel): void {
+//        if (_name)
+//            _callback(JSON.stringify(name));
+//        if (_matrikel)
+//            _callback(JSON.stringify(matrikel));
+//        else
+//            _callback("Der/die Stundent/-in ist nicht in unserer Datenbank.");
+//    }
+//}

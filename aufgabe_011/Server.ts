@@ -1,6 +1,6 @@
 /**
  * Simple server managing between client and database
- * @author: Jirka Dell'Oro-Friedl
+ * @author: Selina Mazzaro
  */
 
 import Http = require("http");
@@ -44,11 +44,11 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
                 respond(_response, json);
             });
             break;
-        case "search":
-            Database.search(function(json: string): void {
-                respond(_response, json);
-            });
-            break;            
+//        case "search":
+//            Database.search(function(json: string): void {
+//                respond(_response, json);
+//            });
+//            break;            
         default:
             respond(_response, "unknown command: " + command);
             break;

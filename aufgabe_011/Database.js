@@ -1,7 +1,7 @@
 "use strict";
 /**
  * Simple database insertion and query for MongoDB
- * @author: Jirka Dell'Oro-Friedl
+ * @author: Selina Mazzaro
  */
 const Mongo = require("mongodb");
 console.log("Database starting");
@@ -38,15 +38,20 @@ function findAll(_callback) {
     }
 }
 exports.findAll = findAll;
-function search(_callback) {
-    var cursor = students.find();
-    cursor.toArray(prepareAnswer);
-    function prepareAnswer(_e, studentArray) {
-        if (_e)
-            _callback("Der/die Stundent/-in ist nicht in unserer Datenbank." + _e);
-        else
-            _callback(JSON.stringify(studentArray[0]));
-    }
-}
-exports.search = search;
+//export function search(_callback: Function): void {
+//    var search: Mongo.Cursor = students.find();
+//    search.toArray(prepareAnswer);
+//
+//    let name: StudentData;
+//    let matrikel: StudentData;
+//
+//    function prepareAnswer(_name, _matrikel): void {
+//        if (_name)
+//            _callback(JSON.stringify(name));
+//        if (_matrikel)
+//            _callback(JSON.stringify(matrikel));
+//        else
+//            _callback("Der/die Stundent/-in ist nicht in unserer Datenbank.");
+//    }
+//} 
 //# sourceMappingURL=Database.js.map
