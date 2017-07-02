@@ -51,7 +51,9 @@ namespace DatabaseClient {
             console.log(responseAsJson);
         }
     }
-
+//*******************************************************************************************************************
+//Aufgabe 11
+//*******************************************************************************************************************
     function search(_event: Event): void {
         let name: HTMLInputElement = <HTMLInputElement>document.getElementById("searchName");
         let matrikel: HTMLInputElement = <HTMLInputElement>document.getElementById("searchMatrikel");

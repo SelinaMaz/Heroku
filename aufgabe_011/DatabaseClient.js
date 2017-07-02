@@ -45,6 +45,9 @@ var DatabaseClient;
             console.log(responseAsJson);
         }
     }
+    //*******************************************************************************************************************
+    //Aufgabe 11
+    //*******************************************************************************************************************
     function search(_event) {
         let name = document.getElementById("searchName");
         let matrikel = document.getElementById("searchMatrikel");
