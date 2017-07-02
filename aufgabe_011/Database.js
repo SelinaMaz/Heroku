@@ -43,9 +43,9 @@ function search(_callback) {
     cursor.toArray(prepareAnswer);
     function prepareAnswer(_e, studentArray) {
         if (_e)
-            _callback("Error" + _e);
+            _callback("Der/die Stundent/-in ist nicht in unserer Datenbank." + _e);
         else
-            _callback(JSON.stringify(studentArray));
+            _callback(JSON.stringify(studentArray[0]));
     }
 }
 exports.search = search;
