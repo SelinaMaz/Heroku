@@ -5,12 +5,12 @@
 import Mongo = require("mongodb");
 console.log("Database starting");
 
-let databaseURL: string = "mongodb://localhost:43542/Test";
+let databaseURL: string = "mongodb://localhost:27017/Test";
 let db: Mongo.Db;
 let students: Mongo.Collection;
 
 if (process.env.NODE_ENV == "production")
-    databaseURL = "mongodb://<SelinaMaz>:<eia2-mlab>@ds143542.mlab.com:43542/eia2-mlab";
+    databaseURL = "mongodb://SelinaMaz:eia2-mlab@ds143542.mlab.com:43542/eia2-mlab";
 
 Mongo.MongoClient.connect(databaseURL, handleConnect);
 
