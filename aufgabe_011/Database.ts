@@ -10,7 +10,7 @@ let db: Mongo.Db;
 let students: Mongo.Collection;
 
 if (process.env.NODE_ENV == "production")
-    databaseURL = "mongodb://username:password@hostname:port/database";
+    databaseURL = "mongodb://SelinaMaz:eia2-mlab@ds143542.mlab.com:43542/eia2-mlab";
 
 Mongo.MongoClient.connect(databaseURL, handleConnect);
 
