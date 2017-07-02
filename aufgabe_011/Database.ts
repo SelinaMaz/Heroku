@@ -5,7 +5,7 @@
 import Mongo = require("mongodb");
 console.log("Database starting");
 
-let databaseURL: string = "mongodb://localhost:8100/Test";
+let databaseURL: string = "mongodb://localhost:43542/Test";
 let db: Mongo.Db;
 let students: Mongo.Collection;
 
