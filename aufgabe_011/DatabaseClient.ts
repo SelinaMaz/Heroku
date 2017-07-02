@@ -58,10 +58,10 @@ namespace DatabaseClient {
         let query: string = "command=search";
         query += "&name=" + name.value;
         query += "&matrikel=" + matrikel.value;
-        sendRequest(query, handleSearchResponse);
+        sendRequest(query, handleSearch);
     }
 
-    function handleSearchResponse(_event: ProgressEvent): void {
+    function handleSearch(_event: ProgressEvent): void {
         let xhr: XMLHttpRequest = (<XMLHttpRequest>_event.target);
         if (xhr.readyState == XMLHttpRequest.DONE) {
             let output: HTMLTextAreaElement = document.getElementsByTagName("textarea")[0];

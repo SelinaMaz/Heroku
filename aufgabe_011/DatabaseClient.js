@@ -51,9 +51,9 @@ var DatabaseClient;
         let query = "command=search";
         query += "&name=" + name.value;
         query += "&matrikel=" + matrikel.value;
-        sendRequest(query, handleSearchResponse);
+        sendRequest(query, handleSearch);
     }
-    function handleSearchResponse(_event) {
+    function handleSearch(_event) {
         let xhr = _event.target;
         if (xhr.readyState == XMLHttpRequest.DONE) {
             let output = document.getElementsByTagName("textarea")[0];
