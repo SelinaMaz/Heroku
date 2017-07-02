@@ -5,7 +5,7 @@
  */
 const Mongo = require("mongodb");
 console.log("Database starting");
-let databaseURL = "mongodb://localhost:27017/Test";
+let databaseURL = "mongodb://localhost:8100/Test";
 let db;
 let students;
 if (process.env.NODE_ENV == "production")
