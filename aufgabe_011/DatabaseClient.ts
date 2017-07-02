@@ -5,8 +5,10 @@ namespace DatabaseClient {
         console.log("Init");
         let insertButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("insert");
         let refreshButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("refresh");
+        let searchButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("searchButton");
         insertButton.addEventListener("click", insert);
         refreshButton.addEventListener("click", refresh);
+        searchButton.addEventListener("click", search);
     }
 
     function insert(_event: Event): void {
@@ -24,10 +26,11 @@ namespace DatabaseClient {
         sendRequest(query, handleFindResponse);
     }
 
+
     function sendRequest(_query: string, _callback: EventListener): void {
         let xhr: XMLHttpRequest = new XMLHttpRequest();
-        xhr.open("GET", "http://localhost:8100?" + _query, true);
-        //xhr.open("GET", "https://eia2-servertest.herokuapp.com?color=" + _color, true);
+       // xhr.open("GET", "http://localhost:8100?" + _query, true);
+        xhr.open("GET", "https://serene-journey-73858.herokuapp.com/?" + _query, true);
         xhr.addEventListener("readystatechange", _callback);
         xhr.send();
     }
@@ -40,6 +43,25 @@ namespace DatabaseClient {
     }
 
     function handleFindResponse(_event: ProgressEvent): void {
+        let xhr: XMLHttpRequest = (<XMLHttpRequest>_event.target);
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            let output: HTMLTextAreaElement = document.getElementsByTagName("textarea")[0];
+            output.value = xhr.response;
+            let responseAsJson: JSON = JSON.parse(xhr.response);
+            console.log(responseAsJson);
+        }
+    }
+
+    function search(_event: Event): void {
+        let name: HTMLInputElement = <HTMLInputElement>document.getElementById("searchName");
+        let matrikel: HTMLInputElement = <HTMLInputElement>document.getElementById("searchMatrikel");
+        let query: string = "command=search";
+        query += "&name=" + name.value;
+        query += "&matrikel=" + matrikel.value;
+        sendRequest(query, handleSearchResponse);
+    }
+
+    function handleSearchResponse(_event: ProgressEvent): void {
         let xhr: XMLHttpRequest = (<XMLHttpRequest>_event.target);
         if (xhr.readyState == XMLHttpRequest.DONE) {
             let output: HTMLTextAreaElement = document.getElementsByTagName("textarea")[0];
