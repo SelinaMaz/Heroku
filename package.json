@@ -3,9 +3,9 @@
 	"version" : "0.0.1",
 	"description" : "first node test",
 	"author" : "Selina Mazzaro",
-	"main" : "NodeTest.js",
+	"main" : "Server.js",
 	"scripts" : {
-		"start" : "node NodeTest.js"
+		"start" : "node Server.js"
 	},
 	"engines" : {
 		"node" : "6.10.3"
